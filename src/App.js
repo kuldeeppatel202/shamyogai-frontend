@@ -61,7 +61,7 @@ export default function App() {
         >
           <h3>💌 Join Our Wellness Tribe</h3>
           <p>Get updates, exclusive sessions, and mindful living tips from ShamyogAI</p>
-          <form action="http://localhost:5000/subscribe" method="POST" className="newsletter-form">
+          <form action={`${process.env.REACT_APP_BACKEND_URL}/subscribe`} method="POST" className="newsletter-form">
             <input type="email" name="email" placeholder="Enter your email" required />
             <button type="submit">Subscribe</button>
           </form>
